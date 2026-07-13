@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAI Secure Gateway</title>
+    <style>
+        body {
+            background-color: #0d0d1a;
+            color: #00ffaa;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-box {
+            background: rgba(20, 20, 35, 0.9);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid #00ffaa;
+            box-shadow: 0 0 30px rgba(0, 255, 170, 0.3);
+            text-align: center;
+            width: 320px;
+        }
+        h2 { margin-bottom: 5px; color: #ffffff; letter-spacing: 2px; }
+        p { color: #8888aa; font-size: 14px; margin-bottom: 30px; }
+        .btn {
+            background: transparent;
+            border: 2px solid #00ffaa;
+            color: #00ffaa;
+            padding: 12px 20px;
+            margin: 10px 0;
+            width: 100%;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #00ffaa;
+            color: #0d0d1a;
+            box-shadow: 0 0 20px #00ffaa;
+        }
+        input[type="password"] {
+            width: 92%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #00ffaa;
+            background: #141423;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-box">
+    <h2>RAI SYSTEM</h2>
+    <p>Authentication Required</p>
+    
+    <input type="password" id="pass" placeholder="Enter RAI Master Password">
+    
+    <button class="btn" onclick="verifyBiometric()">Scan Fingerprint / Face</button>
+    
+    <button class="btn" onclick="verifyVoice()">Verify Voice Command</button>
+    
+    <button class="btn" id="downloadBtn" style="display:none; background:#00ffaa; color:#0d0d1a;">Download RAI APK</button>
+</div>
+
+<script>
+    function verifyBiometric() {
+        alert("RAI Biometric Core: Scanner Initiated...");
+    }
+
+    function verifyVoice() {
+        alert("RAI Voice Core: Listening for Master Voice...");
+    }
+</script>
+
+</body>
+</html>
